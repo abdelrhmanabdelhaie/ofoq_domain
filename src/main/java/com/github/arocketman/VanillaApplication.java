@@ -1,6 +1,5 @@
 package com.github.arocketman;
 
-import com.github.arocketman.entities.Role;
 import com.github.arocketman.entities.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
