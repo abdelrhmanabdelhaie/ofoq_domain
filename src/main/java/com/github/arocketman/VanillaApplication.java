@@ -2,7 +2,6 @@ package com.github.arocketman;
 
 import com.github.arocketman.entities.Role;
 import com.github.arocketman.entities.User;
-import com.github.arocketman.services.UserService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -16,17 +15,17 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class VanillaApplication {
     
 
-    @Bean
-    public CommandLineRunner setupDefaultUser(UserService service) {
-        return args -> {
-            service.save(new User(
-                    "user", //username
-                    "user", //password
-Arrays.asList(new Role("USER"), new Role("ACTUATOR")),//roles 
-                    true//Active
-            ));
-        };
-    }
+//    @Bean
+//    public CommandLineRunner setupDefaultUser(UserService service) {
+//        return args -> {
+//            service.save(new User(
+//                    "user", //username
+//                    "user", //password
+//Arrays.asList(new Role("USER"), new Role("ACTUATOR")),//roles 
+//                    true//Active
+//            ));
+//        };
+//    }
     
     @Bean
     public PasswordEncoder getPasswordEncoder(){
