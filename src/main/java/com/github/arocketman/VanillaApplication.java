@@ -1,6 +1,9 @@
 package com.github.arocketman;
 
+import com.github.arocketman.entities.Role;
 import com.github.arocketman.entities.User;
+import com.github.arocketman.services.UserService;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -18,7 +21,7 @@ public class VanillaApplication {
 //    public CommandLineRunner setupDefaultUser(UserService service) {
 //        return args -> {
 //            service.save(new User(
-//                    "user", //username
+//                    "7mada", //username
 //                    "user", //password
 //Arrays.asList(new Role("USER"), new Role("ACTUATOR")),//roles 
 //                    true//Active
