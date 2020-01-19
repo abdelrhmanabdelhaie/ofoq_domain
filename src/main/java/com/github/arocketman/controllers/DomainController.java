@@ -40,15 +40,15 @@ private  DomainRepository domainRepository;
 		return domainRepository.findAll();
 	}
 	
-	@GetMapping("/domain/{id}")
-	public ResponseEntity<Domain> getDomainById(@PathVariable(value = "id") Long id)
-			throws ResourceNotFoundException {
-			Domain domain = domainRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("domain not found for this id :: " + id));
-		return ResponseEntity.ok().body(domain);
-	}
+//	@GetMapping("/domain/{id}")
+//	public ResponseEntity<Domain> getDomainById(@PathVariable(value = "id") Long id)
+//			throws ResourceNotFoundException {
+//			Domain domain = domainRepository.findById(id)
+//				.orElseThrow(() -> new ResourceNotFoundException("domain not found for this id :: " + id));
+//		return ResponseEntity.ok().body(domain);
+//	}
 	
-	@GetMapping("/domainbycode/{code}")
+	@GetMapping("/domain/{code}")
 	public ResponseEntity<Domain> getDomainByCode(@PathVariable(value = "code") String code)
 			throws ResourceNotFoundException {
 			Domain domain = domainRepository.getDomainByCode(code);
