@@ -35,7 +35,7 @@ public class VanillaApplication {
 	/*
 	 * @Override protected SpringApplicationBuilder
 	 * configure(SpringApplicationBuilder application) { return
-	 * application.sources(VanillaApplication.class); }
+	 * application.sources(Vanilla`Application.class); }
 	 */
 	
     @Bean

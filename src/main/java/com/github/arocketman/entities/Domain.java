@@ -17,11 +17,11 @@ public class Domain {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	@Column(name = "name", nullable = true)
+	@Column(name = "name", nullable = true ,unique = true)
 	private String name;
-	@Column(name = "code", nullable = true)
+	@Column(name = "code", nullable = true ,unique = true)
 	private String code;
-	@Column(name = "domain", nullable = true)
+	@Column(name = "domain", nullable = true ,unique = true)
 	private String domain;
 	@Column(name = "port", nullable = true)
 	private String port;
@@ -30,12 +30,17 @@ public class Domain {
 
 	}
 
-	public Domain(String code, String domain, String port) {
+	
+
+	public Domain(String name, String code, String domain, String port) {
 		super();
+		this.name = name;
 		this.code = code;
 		this.domain = domain;
 		this.port = port;
 	}
+
+
 
 	public long getId() {
 		return id;
@@ -68,6 +73,18 @@ public class Domain {
 	public void setPort(String port) {
 		this.port = port;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
 
 	@Override
 	public String toString() {
